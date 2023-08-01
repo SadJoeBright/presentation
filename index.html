@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>CSS Grid Layout</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
@@ -659,7 +659,733 @@
 						</pre>
 						<img src="assets/images/justify-content_space-evenly.png" alt="justify-content_space-evenly">
 					</section>
-				</section>		
+				</section>
+				<section>
+					<section>
+						<p><span style="color:  rgb(182, 152, 1);"><b>align-items</b></span></p>
+						<p>
+							Aligns grid items along the block (column) axis (as opposed to justify-items
+							which aligns along the inline (row) axis). This value applies to all grid items inside the container.
+						</p>
+					</section>
+					<section>
+						<p>Values:</p>
+						<ul>
+							<li><b>stretch</b> - fills the whole height of the cell (this is the default)</li>
+							<li><b>start</b> - aligns items to be flush with the end edge of their cell</li>
+							<li><b>end</b> - aligns items to be flush with the end edge of their cell</li>
+							<li><b>center</b> - aligns items in the center of their cell</li>
+							<li>
+								<b>baseline</b> - align items along text baseline. There are modifiers to baseline —
+								first baseline and last baseline which will use the baseline from the first or last line in the case of multi-line text.
+							</li>
+						</ul>
+					</section>
+					<section>
+						<pre>
+							<code data-trim data-noescape>
+								.container {
+									align-items: start;
+								}
+							</code>
+						</pre>
+						<img src="assets/images/align-items_start.png" alt="align-items_start">
+					</section>
+					<section>
+						<pre>
+							<code data-trim data-noescape>
+								.container {
+									align-items: end;
+								}
+							</code>
+						</pre>
+						<img src="assets/images/align-items_end.png" alt="justify-end">
+					</section>
+					<section>
+						<pre>
+							<code data-trim data-noescape>
+								.container {
+									align-items: center;
+								}
+							</code>
+						</pre>
+						<img src="assets/images/align-items_center.png" alt="justify-items_center">
+					</section>
+					<section>
+						<pre>
+							<code data-trim data-noescape>
+								.container {
+									align-items: stretch;
+								}
+							</code>
+						</pre>
+						<img src="assets/images/align-items_stretch.png" alt="justify-items_stretch">
+					</section>
+				</section>
+				<section>
+					<section>
+						<p><span style="color:  rgb(182, 152, 1);"><b>align-content</b></span></p>
+						<p>
+							Sometimes the total size of your grid might be less than the size of its grid container.
+							This could happen if all of your grid items are sized with non-flexible units like px.
+							I this case you can set the alignment of the grid within the grid container.
+							This property aligns the grid along the block (column) axis (as opposed to justify-content
+							which aligns the grid along the inline (row) axis).
+						</p>
+					</section>
+					<section>
+						<p>Values:</p>
+						<ul>
+							<li><b>start</b> - aligns the grid to be flush with the start edge of the grid container</li>
+							<li><b>end</b> - aligns the grid to be flush with the end edge of the grid container</li>
+							<li><b>center</b> - aligns the grid in the center of the grid container</li>
+							<li><b>stretch </b> - resizes the grid items to allow the grid to fill the full width of the grid container</li>
+							<li><b>space-around</b> - places an even amount of space between each grid item, with half-sized spaces on the far ends</li>
+							<li><b>space-between</b> - places an even amount of space between each grid item, with no space at the far ends</li>
+							<li><b>space-evenly</b> - places an even amount of space between each grid item, including the far ends</li>
+						</ul>
+					</section>
+					<section>
+						<p>Values:</p>
+						<ul>
+							<li><b>space-around</b> - places an even amount of space between each grid item, with half-sized spaces on the far ends</li>
+							<li><b>space-between</b> - places an even amount of space between each grid item, with no space at the far ends</li>
+							<li><b>space-evenly</b> - places an even amount of space between each grid item, including the far ends</li>
+						</ul>
+					</section>
+					<section>
+						<pre>
+							<code data-trim data-noescape class="css">
+								.container {
+									align-content: start;
+								}
+							</code>
+						</pre>
+						<img src="assets/images/align-content_start.png" alt="align-content_start">
+					</section>
+					<section>
+						<pre>
+							<code data-trim data-noescape class="css">
+								.container {
+									align-content: end;
+								}
+							</code>
+						</pre>
+						<img src="assets/images/align-content_end.png" alt="align-content_end">
+					</section>
+					<section>
+						<pre>
+							<code data-trim data-noescape>
+								.container {
+									align-content: center;
+								}
+							</code>
+						</pre>
+						<img src="assets/images/align-content_center.png" alt="align-content_center">
+					</section>
+					<section>
+						<pre>
+							<code data-trim data-noescape>
+								.container {
+									align-content: stretch;
+								}
+							</code>
+						</pre>
+						<img src="assets/images/align-content_stretch.png" alt="align-content_stretch">
+					</section>
+					<section>
+						<pre>
+							<code data-trim data-noescape class="css">
+								.container {
+									align-content: space-around;
+								}
+							</code>
+						</pre>
+						<img src="assets/images/align-content_space-around.png" alt="align-content_space-around">
+					</section>
+					<section>
+						<pre>
+							<code data-trim data-noescape class="css">
+								.container {
+									align-content: space-between;
+								}
+							</code>
+						</pre>
+						<img src="assets/images/align-content_space-between.png" alt="align-content_space-between">
+					</section>
+					<section>
+						<pre>
+							<code data-trim data-noescape class="css">
+								.container {
+									align-content: space-evenly;
+								}
+							</code>
+						</pre>
+						<img src="assets/images/align-content_space-evenly.png" alt="align-content_space-evenly">
+					</section>
+				</section>
+				<section>
+					<p><span style="color:  rgb(182, 152, 1);"><b>place-content</b></span></p>
+					<p>place-content sets both the align-content and justify-content properties in a single declaration.</p>
+					<p>Values:</p>
+					<ul>
+						<li>
+							<b>&lt;align-content> / &lt;justify-content></b>> – The first value sets align-content, the second value justify-content.
+							If the second value is omitted, the first value is assigned to both properties.
+						</li>
+					</ul>
+					<p>All major browsers except Edge support the place-content shorthand property.</p>
+				</section>
+				<section>
+					<section>
+						<p><span style="color:  rgb(182, 152, 1);"><b>grid-auto-columns</b></span></p>
+						<p><span style="color:  rgb(182, 152, 1);"><b>grid-auto-rows</b></span></p>
+						<p>
+							Specifies the size of any auto-generated grid tracks (aka implicit grid tracks).
+							Implicit tracks get created when there are more grid items than cells in the grid or when a grid item is placed outside of the explicit grid.
+						</p>
+					</section>
+					<section>
+						<p>Values:</p>
+						<ul>
+							<li><b>&lt;track-size></b> – can be a length, a percentage, or a fraction of the free space in the grid (using the fr unit)</li>
+						</ul>
+						<pre>
+							<code data-trim data-noescape class="css">
+								.container {
+									grid-auto-columns: &lt;track-size> ...;
+									grid-auto-rows: &lt;track-size> ...;
+								}
+							</code>
+						</pre>
+						<p>To illustrate how implicit grid tracks get created, think about this:</p>
+						<pre>
+							<code data-trim data-noescape class="css">
+								.container {
+									grid-template-columns: 60px 60px;
+									grid-template-rows: 90px 90px;
+								}
+							</code>
+						</pre>
+					</section>
+					<section>
+						<p>This creates a 2 x 2 grid.</p>
+						<img src="assets/images/grid-auto-rows.png" alt="grid-auto-rows">
+					</section>
+					<section>
+						<p>But now imagine you use, <b>grid-column</b> and <b>grid-row</b> to position your grid items like this:</p>
+						<pre>
+							<code data-trim data-noescape>
+								.item-a {
+									grid-column: 1 / 2;
+									grid-row: 2 / 3;
+								}
+								.item-b {
+									grid-column: 5 / 6;
+									grid-row: 2 / 3;
+								}
+							</code>
+						</pre>
+					</section>
+					<section>						
+						<img src="assets/images/grid-auto-rows_1.png" alt="grid-auto-rows">
+						<p>
+							We told .item-b to start on column line 5 and end at column line 6, but we never defined a column line 5 or 6.
+							Because we referenced lines that don’t exist, implicit tracks with widths of 0 are created to fill in the gaps.
+						</p>
+					</section>
+					<section>
+						<p>We can use <u>grid-auto-columns</u> and <u>grid-auto-rows</u>> to specify the widths of these implicit tracks:</p>
+						<pre>
+							<code data-trim data-noescape>
+								.container {
+									grid-auto-columns: 60px;
+								}
+							</code>
+						</pre>
+						<img src="assets/images/grid-auto-rows_2.png" alt="grid-auto-rows">
+					</section>
+				</section>
+				<section>
+					<section>
+						<p><span style="color:  rgb(182, 152, 1);"><b>grid-auto-flow</b></span></p>
+						<P>
+							If you have grid items that you don’t explicitly place on the grid, the auto-placement algorithm kicks in to automatically place the items.
+							This property controls how the auto-placement algorithm works.
+						</P>
+					</section>
+					<section>
+						<p>Values:</p>
+						<ul>
+							<li><b>row</b> – tells the auto-placement algorithm to fill in each row in turn, adding new rows as necessary (default)</li>
+							<li><b>column</b> – tells the auto-placement algorithm to fill in each column in turn, adding new columns as necessary</li>
+							<li><b>dense</b> – tells the auto-placement algorithm to attempt to fill in holes earlier in the grid if smaller items come up later</li>
+						</ul>
+					</section>
+					<section>
+						<p>Consider this HTML:</p>
+						<pre>
+							<code data-trim data-noescape>
+								&lt;section class="container">
+									&lt;div class="item-a">item-a&lt;/div>
+									&lt;div class="item-b">item-b&lt;/div>
+									&lt;div class="item-c">item-c&lt;/div>
+									&lt;div class="item-d">item-d&lt;/div>
+									&lt;div class="item-e">item-e&lt;/div>
+								&lt;/section>
+							</code>
+						</pre>
+						<p>You define a grid with five columns and two rows, and set grid-auto-flow to row (which is also the default):</p>
+						<pre>
+							<code data-trim data-noescape>
+								.container {
+									display: grid;
+									grid-template-columns: 60px 60px 60px 60px 60px;
+									grid-template-rows: 30px 30px;
+									grid-auto-flow: row;
+								}
+							</code>
+						</pre>						
+					</section>
+					<section>
+						<p>When placing the items on the grid, you only specify spots for two of them:</p>
+						<pre>
+							<code data-trim data-noescape>
+								.item-a {
+									grid-column: 1;
+									grid-row: 1 / 3;
+								}
+								.item-e {
+									grid-column: 5;
+									grid-row: 1 / 3;
+								}
+							</code>
+						</pre>
+					</section>
+					<section>
+						<p>
+							Because we set grid-auto-flow to row, our grid will look like this.
+							Notice how the three items we didn’t place (item-b, item-c and item-d) flow across the available rows:
+						</p>
+						<img src="assets/images/grid-auto-flow.png" alt="grid-auto-flow">
+					</section>
+					<section>
+						<p>If we instead set grid-auto-flow to column, item-b, item-c and item-d flow down the columns:</p>
+						<pre>
+							<code data-trim data-noescape>
+								.container {
+									display: grid;
+									grid-template-columns: 60px 60px 60px 60px 60px;
+									grid-template-rows: 30px 30px;
+									grid-auto-flow: column;
+								}
+							</code>
+						</pre>
+						<img src="assets/images/grid-auto-flow_1.png" alt="grid-auto-flow">
+					</section>
+				</section>			
+				<section>
+					<section>
+						<p><span style="color:  rgb(182, 152, 1);"><b>grid</b></span></p>
+						<p>
+							A shorthand for setting all of the following properties in a single declaration: grid-template-rows,
+							grid-template-columns, grid-template-areas, grid-auto-rows, grid-auto-columns, and grid-auto-flow
+							(Note: You can only specify the explicit or the implicit grid properties in a single grid declaration).
+						</p>
+					</section>
+					<section>
+						<p>Values:</p>
+						<ul>
+							<li><b>none</b> – sets all sub-properties to their initial values.</li>
+							<li><b>&lt;grid-template></b> – works the same as the <u>grid-template</u> shorthand.</li>
+							<li>
+								<b>&lt;grid-template-rows> / [ auto-flow && dense? ] &lt;grid-auto-columns>?</b> – sets <u>grid-template-rows</u>
+								to the specified value. If the <b>auto-flow</b> keyword is to the right of the slash, it sets <u>grid-auto-flow</u> to column.
+								If the dense keyword is specified additionally, the auto-placement algorithm uses a “dense” packing algorithm.
+								If <u>grid-auto-columns</u> is omitted, it is set to auto.
+							</li>
+						</ul>
+					</section>
+					<section>
+						<ul>
+							<li>
+								<b>[ auto-flow && dense? ] &lt;grid-auto-rows>? / &lt;grid-template-columns></b> – sets <u>grid-template-columns</u>
+								 to the specified value. If the auto-flow keyword is to the left of the slash, it sets <u>grid-auto-flow</u> to row.
+								 If the dense keyword is specified additionally, the auto-placement algorithm uses a “dense” packing algorithm.
+								 If <u>grid-auto-rows</u> is omitted, it is set to auto.
+							</li>
+						</ul>
+					</section>
+					<section>
+						<p>Examples:</p>
+						<p>The following two code blocks are equivalent:</p>
+						<pre>
+							<code data-trim data-noescape>
+								.container {
+									grid: 100px 300px / 3fr 1fr;
+								}
+								
+								.container {
+									grid-template-rows: 100px 300px;
+									grid-template-columns: 3fr 1fr;
+								}
+							</code>
+						</pre>
+					</section>
+					<section>
+						<p>Examples:</p>
+						<p>The following two code blocks are equivalent:</p>
+						<pre>
+							<code data-trim data-noescape class="css">
+								.container {
+									grid: auto-flow / 200px 1fr;
+								}
+								
+								.container {
+									grid-auto-flow: row;
+									grid-template-columns: 200px 1fr;
+								}
+							</code>
+						</pre>
+					</section>
+					<section>
+						<p>Examples:</p>
+						<p>The following two code blocks are equivalent:</p>
+						<pre>
+							<code data-trim data-noescape>
+								.container {
+									grid: auto-flow dense 100px / 1fr 2fr;
+								}
+								
+								.container {
+									grid-auto-flow: row dense;
+									grid-auto-rows: 100px;
+									grid-template-columns: 1fr 2fr;
+								}
+							</code>
+						</pre>
+					</section>
+					<section>
+						<p>Examples:</p>
+						<p>The following two code blocks are equivalent:</p>
+						<pre>
+							<code data-trim data-noescape>
+								.container {
+									grid: 100px 300px / auto-flow 200px;
+								}
+								
+								.container {
+									grid-template-rows: 100px 300px;
+									grid-auto-flow: column;
+									grid-auto-columns: 200px;
+								}
+							</code>
+						</pre>
+					</section>
+				</section>
+				<section>
+					<h2>Properties for the Children</h2>
+					<p>(Grid Items)</p>
+				</section>
+				<section>
+					<section>
+						<p><span style="color:  rgb(182, 152, 1);"><b>grid-column-start</b></span></p>
+						<p><span style="color:  rgb(182, 152, 1);"><b>grid-column-end</b></span></p>
+						<p><span style="color:  rgb(182, 152, 1);"><b>grid-row-start</b></span></p>
+						<p><span style="color:  rgb(182, 152, 1);"><b>grid-row-end</b></span></p>
+						<p>
+							Determines a grid item’s location within the grid by referring to specific grid lines.
+							grid-column-start/grid-row-start is the line where the item begins, and grid-column-end/grid-row-end is the line where the item ends.
+						</p>
+					</section>
+					<section>
+						<p>Values:</p>
+						<ul>
+							<li><b>&lt;line></b> – can be a number to refer to a numbered grid line, or a name to refer to a named grid line</li>
+							<li><b>span &lt;number></b> – the item will span across the provided number of grid tracks</li>
+							<li><b>span &lt;name></b> – the item will span across until it hits the next line with the provided name</li>
+							<li><b>auto</b> – indicates auto-placementes, an automatic span, or default span of one</li>
+						</ul>
+					</section>
+					<section>
+						<pre>
+							<code data-trim data-noescape class="css">
+								.item {
+									grid-column-start: &lt;number> | &lt;name> | span &lt;number> | span &lt;name> | auto;
+									grid-column-end: &lt;number> | &lt;name> | span &lt;number> | span &lt;name> | auto;
+									grid-row-start: &lt;number> | &lt;name> | span &lt;number> | span &lt;name> | auto;
+									grid-row-end:&lt;<number> | &lt;name> | span &lt;number> | span &lt;name> | auto;
+								}
+							</code>
+						</pre>
+					</section>
+					<section>
+						<pre>
+							<code data-trim data-noescape class="css">
+								.item-a {
+									grid-column-start: 2;
+									grid-column-end: five;
+									grid-row-start: row1-start;
+									grid-row-end: 3;
+								}
+							</code>
+						</pre>
+						<img src="assets/images/grid-column-start(end)_1.png" alt="grid-column-start(end)">
+					</section>
+					<section>
+						<pre>
+							<code data-trim data-noescape class="css">
+								.item-b {
+									grid-column-start: 1;
+									grid-column-end: span col4-start;
+									grid-row-start: 2;
+									grid-row-end: span 2;
+								}
+							</code>
+						</pre>
+						<img src="assets/images/grid-column-start(end)_2.png" alt="grid-column-start(end)">
+					</section>					
+				</section>
+				<section>
+					<section>
+						<p><span style="color:  rgb(182, 152, 1);"><b>grid-column</b></span></p>
+						<p><span style="color:  rgb(182, 152, 1);"><b>grid-row</b></span></p>
+						<p>Shorthand for grid-column-start + grid-column-end, and grid-row-start + grid-row-end, respectively.</p>
+					</section>
+					<section>
+						<p>Values:</p>
+						<ul>
+							<li><b>&lt;start-line> / &lt;end-line></b> – each one accepts all the same values as the longhand version, including span</li>
+						</ul>
+						<pre>
+							<code data-trim data-noescape class="css">
+								.item {
+									grid-column: &ltstart-line> / &ltend-line> | &ltstart-line> / span&ltvalue>;
+									grid-row: &ltstart-line> / &ltend-line> | &lt;start-line> / span &lt;value>;
+								}
+							</code>
+						</pre>
+					</section>
+					<section>
+						<pre>
+							<code data-trim data-noescape class="css">
+								.item-c {
+									grid-column: 3 / span 2;
+									grid-row: third-line / 4;
+								}
+							</code>
+						</pre>
+						<img src="assets/images/grid-column(grid-row).png" alt="grid-column(grid-row)">
+						<p>If no end line value is declared, the item will span 1 track by default.</p>
+					</section>					
+				</section>
+				<section>
+					<section>
+						<p><span style="color:  rgb(182, 152, 1);"><b>grid-area</b></span></p>
+						<p>
+							Gives an item a name so that it can be referenced by a template created with the grid-template-areas property.
+							Alternatively, this property can be used as an even shorter shorthand for grid-row-start +
+							grid-column-start + grid-row-end + grid-column-end.
+						</p>
+					</section>
+					<section>
+						<p>Values:</p>
+						<ul>
+							<li><b>&lt;name></b> – a name of your choosing</li>
+							<li><b>&lt;row-start> / &lt;column-start> / &lt;row-end> / &lt;column-end></b> – can be numbers or named lines</li>
+						</ul>
+						<pre>
+							<code data-trim data-noescape class="css">
+								.item {
+									grid-area: &lt;name> | &lt;row-start> / &lt;column-start> / &lt;row-end> / &lt;column-end>;
+								}
+							</code>
+						</pre>
+					</section>
+					<section>
+						<p>As a way to asign a name to the item:</p>
+						<pre>
+							<code data-trim data-noescape class="css">
+								.item-d {
+									grid-area: header;
+								}
+							</code>
+						</pre>
+					</section>
+					<section>
+						<p>As the short-shorthand for grid-row-start + grid-column-start + grid-row-end + grid-column-end:</p>
+						<pre>
+							<code data-trim data-noescape class="css">
+								.item-d {
+									grid-area: 1 / col4-start / last-line / 6;
+								}
+							</code>
+						</pre>
+						<img src="assets/images/grid-area_child.png" alt="grid-area_child">
+					</section>			
+				</section>
+				<section>
+					<section>
+						<p><span style="color:  rgb(182, 152, 1);"><b>justify-self</b></span></p>
+						<p>
+							Aligns a grid item inside a cell along the inline (row) axis
+							(as opposed to align-self which aligns along the block (column) axis). This value applies to a grid item inside a single cell.
+						</p>
+					</section>
+					<section>
+						<p>Values:</p>
+						<ul>
+							<li><b>start</b> - aligns the grid item to be flush with the start edge of the cell</li>
+							<li><b>end </b> - aligns the grid item to be flush with the end edge of the cell</li>
+							<li><b>center </b> - aligns the grid item in the center of the cell</li>
+							<li><b>stretch </b> - fills the whole width of the cell (this is the default)</li>
+						</ul>
+					</section>
+					<section>
+						<pre>
+							<code data-trim data-noescape>
+								.item-a {
+									justify-self: start;
+								}
+							</code>
+						</pre>
+						<img src="assets/images/justify-self_start.png" alt="justify-self">
+					</section>
+					<section>
+						<pre>
+							<code data-trim data-noescape>
+								.item-a {
+									justify-self: end;
+								}
+							</code>
+						</pre>
+						<img src="assets/images/justify-self_end.png" alt="justify-self">
+					</section>
+					<section>
+						<pre>
+							<code data-trim data-noescape>
+								.item-a {
+									justify-self: center;
+								}
+							</code>
+						</pre>
+						<img src="assets/images/justify-self_center.png" alt="justify-self">
+					</section>
+					<section>
+						<pre>
+							<code data-trim data-noescape>
+								.item-a {
+									justify-self: stretch;
+								}
+							</code>
+						</pre>
+						<img src="assets/images/justify-self_stretch.png" alt="justify-self">
+					</section>
+				</section>
+				<section>
+					<section>
+						<p><span style="color:  rgb(182, 152, 1);"><b>align-self</b></span></p>
+						<p>
+							Aligns a grid item inside a cell along the block (column) axis
+							(as opposed to justify-self which aligns along the inline (row) axis). This value applies to the content inside a single grid item.
+						</p>
+					</section>
+					<section>
+						<p>Values:</p>
+						<ul>
+							<li><b>start</b> - aligns the grid item to be flush with the start edge of the cell</li>
+							<li><b>end </b> - aligns the grid item to be flush with the end edge of the cell</li>
+							<li><b>center </b> - aligns the grid item in the center of the cell</li>
+							<li><b>stretch </b> - fills the whole width of the cell (this is the default)</li>
+						</ul>
+					</section>
+					<section>
+						<pre>
+							<code data-trim data-noescape>
+								.item-a {
+									align-self: start;
+								}
+							</code>
+						</pre>
+						<img src="assets/images/align-self_start.png" alt="align-self">
+					</section>
+					<section>
+						<pre>
+							<code data-trim data-noescape>
+								.item-a {
+									align-self: end;
+								}
+							</code>
+						</pre>
+						<img src="assets/images/align-self_end.png" alt="align-self">
+					</section>
+					<section>
+						<pre>
+							<code data-trim data-noescape>
+								.item-a {
+									align-self: center;
+								}
+							</code>
+						</pre>
+						<img src="assets/images/align-self_center.png" alt="align-self">
+					</section>
+					<section>
+						<pre>
+							<code data-trim data-noescape>
+								.item-a {
+									align-self: stretch;
+								}
+							</code>
+						</pre>
+						<img src="assets/images/align-self_stretch.png" alt="align-self">
+					</section>
+				</section>
+				<section>
+					<section>
+						<p><span style="color:  rgb(182, 152, 1);"><b>place-self</b></span></p>
+						<p>
+							place-self sets both the align-self and justify-self properties in a single declaration.
+						</p>
+					</section>
+					<section>
+						<p>Values:</p>
+						<ul>
+							<li><b>auto</b> - The “default” alignment for the layout mode.</li>
+							<li>
+								<b>&lt;align-self> / &lt;justify-self></b> - The first value sets align-self, the second value justify-self.
+								If the second value is omitted, the first value is assigned to both properties.
+							</li>
+						</ul>
+					</section>
+					<section>
+						<pre>
+							<code data-trim data-noescape>
+								.item-a {
+									place-self: center;
+								}
+							</code>
+						</pre>
+						<img src="assets/images/place-self_start.png" alt="place-self">
+					</section>
+					<section>
+						<pre>
+							<code data-trim data-noescape>
+								.item-a {
+									place-self: center stretch;
+								}
+							</code>
+						</pre>
+						<img src="assets/images/place-self_stretch.png" alt="place-self">
+					</section>					
+				</section>
+				<section>
+					<h2>Useful links:</h2>
+					<p></p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout">MDN Web Docs</a></p>
+					<p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout">W3school</a></p>
+				</section>
+				<section>
+					<p>Thank you for attention</p>
+				</section>
 			</div>
 		</div>
 
